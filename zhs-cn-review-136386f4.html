@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>zhs-cn-shijiebei.com – 世界杯导航与介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #faf7f2;
+      font-family: 'Georgia', 'Times New Roman', '宋体', serif;
+      color: #2d2b28;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+    .page {
+      max-width: 920px;
+      margin: 0 auto;
+      background: #fffcf8;
+      padding: 2.5rem 2.2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-bottom: 1.8rem;
+      border-bottom: 1px solid #e5ddd3;
+    }
+    .site-title {
+      font-size: 1.6rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: #3f3a34;
+    }
+    .site-title span {
+      font-size: 0.9rem;
+      font-weight: normal;
+      color: #9a8f82;
+      margin-left: 12px;
+      letter-spacing: 0.3px;
+    }
+    nav {
+      display: flex;
+      gap: 2.2rem;
+      flex-wrap: wrap;
+      margin-top: 0.4rem;
+    }
+    nav a {
+      color: #5d5347;
+      text-decoration: none;
+      font-size: 1rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    nav a:hover {
+      border-bottom-color: #b8a99a;
+      color: #2d2b28;
+    }
+    .hero {
+      margin: 2.8rem 0 2.2rem 0;
+      padding: 2rem 0 1.2rem 0;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 450;
+      line-height: 1.25;
+      color: #2c2824;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.5px;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #4b443c;
+      max-width: 86%;
+    }
+    .intro-card {
+      background: #f5efe9;
+      padding: 1.8rem 2rem;
+      border-radius: 14px;
+      margin: 2rem 0 2.8rem 0;
+      border-left: 5px solid #c7b6a4;
+    }
+    .intro-card p {
+      font-size: 1.05rem;
+      color: #3d3832;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin: 2.8rem 0;
+    }
+    .feature-item {
+      background: #ffffff;
+      border: 1px solid #ede7df;
+      border-radius: 16px;
+      padding: 1.8rem 1.5rem 1.6rem;
+      transition: box-shadow 0.2s;
+    }
+    .feature-item:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+    }
+    .feature-item h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #3b3630;
+      margin-bottom: 0.8rem;
+      border-left: 3px solid #cbb9a8;
+      padding-left: 0.8rem;
+    }
+    .feature-item p {
+      font-size: 1rem;
+      color: #5b5248;
+    }
+    .quote-block {
+      background: #f9f5ef;
+      padding: 1.6rem 2rem;
+      margin: 2.6rem 0;
+      border-radius: 30px 8px 30px 8px;
+      font-style: normal;
+      color: #3c3730;
+      border: 1px solid #e6ddd2;
+    }
+    .quote-block strong {
+      color: #2b2621;
+    }
+    .faq-summary {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin: 2.2rem 0 1.8rem;
+    }
+    .faq-item {
+      border-bottom: 1px dashed #ddd4c9;
+      padding-bottom: 1.2rem;
+    }
+    .faq-item h4 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #3a342e;
+      margin-bottom: 0.4rem;
+    }
+    .faq-item p {
+      color: #5a5046;
+      font-size: 0.98rem;
+    }
+    .notice {
+      background: #efe8df;
+      padding: 1.3rem 1.8rem;
+      border-radius: 40px 12px 40px 12px;
+      font-size: 0.95rem;
+      color: #3d352c;
+      margin-top: 2.4rem;
+    }
+    footer {
+      margin-top: 3.2rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid #e2d9cf;
+      font-size: 0.9rem;
+      color: #7e7265;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-links a {
+      color: #5f5549;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-color: #d2c6b8;
+      margin-left: 1.2rem;
+    }
+    .footer-links a:first-child {
+      margin-left: 0;
+    }
+    @media (max-width: 720px) {
+      .page {
+        padding: 1.8rem 1.2rem;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+      nav {
+        gap: 1.2rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        max-width: 100%;
+      }
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+      }
+      .intro-card {
+        padding: 1.2rem 1.2rem;
+      }
+      .quote-block {
+        padding: 1.2rem 1.2rem;
+      }
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+      }
+      .footer-links a {
+        margin-left: 0;
+        margin-right: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="site-title">
+      zhs-cn-shijiebei<span>世界杯站点导航</span>
+    </div>
+    <nav>
+      <a href="#">介绍</a>
+      <a href="#">场景</a>
+      <a href="#">说明</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>关于世界杯的轻量导航与说明</h1>
+    <p>这个页面围绕 zhs-cn-shijiebei.com 展开，内容侧重于站点介绍、常见场景以及一些必要的说明。我们希望用平实的叙述，让你快速了解这个与世界杯相关的信息入口。</p>
+  </div>
+
+  <div class="intro-card">
+    <p><strong>站点背景</strong> —— 这是一处围绕世界杯话题整理的内容聚合与导航页面。它并非官方机构，而是基于公开信息与赛事常识所做的梳理。你可以通过这里快速浏览世界杯相关的基本概念、经典时刻以及一些实用资料。站点本身保持轻量、克制，不追踪用户，也不插入干扰性内容。</p>
+  </div>
+
+  <div class="feature-grid">
+    <div class="feature-item">
+      <h3>赛事常识</h3>
+      <p>涵盖历届世界杯的简要概况、冠军记录以及赛制演变。适合新老球迷快速回顾或查找基础信息。</p>
+    </div>
+    <div class="feature-item">
+      <h3>经典瞬间</h3>
+      <p>收录了一些被反复提及的比赛片段与球员故事，不追求猎奇，只呈现那些具有普遍记忆点的画面。</p>
+    </div>
+    <div class="feature-item">
+      <h3>资料索引</h3>
+      <p>整理了一些公开数据源与参考链接，方便进一步查阅。所有外部资源均标注来源，不做二次篡改。</p>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <strong>关于可信说明：</strong> 本站内容主要参考了国际足联官方记录、多家体育媒体的报道以及维基百科相关词条，并经过交叉核对。但受限于精力与时效性，部分数据可能存在滞后，建议以官方信息为准。如果你发现任何不准确之处，欢迎通过站点提供的联系方式反馈。
+  </div>
+
+  <div class="faq-summary">
+    <div class="faq-item">
+      <h4>这个网站和世界杯官方有什么关系？</h4>
+      <p>没有直接隶属关系。这是一个由爱好者维护的非官方信息导航页面，旨在提供便捷的参考入口。官方信息请访问 FIFA 官网。</p>
+    </div>
+    <div class="faq-item">
+      <h4>内容多久更新一次？</h4>
+      <p>大赛期间会较为频繁地更新赛程、结果等动态信息；非赛事期间则侧重于基础资料的维护与修正。更新频率大约每月1–2次。</p>
+    </div>
+    <div class="faq-item">
+      <h4>我可以在这里看到直播或回放吗？</h4>
+      <p>本网站不提供任何直播或视频播放服务，仅收录正规转播平台的链接索引。观看比赛请前往持有版权的平台。</p>
+    </div>
+  </div>
+
+  <div class="notice">
+    ⚽ 如果你对世界杯感兴趣，推荐将 <a href="https://zhs-cn-shijiebei.com" style="color:#3a342e; text-decoration: underline; text-underline-offset: 3px;">世界杯</a> 作为你的快捷书签。这个页面聚合了赛事常识、经典回顾与实用资料，而且没有任何冗余的推广内容。你可以随时回来查找或分享。
+  </div>
+
+  <footer>
+    <div>© 2025 · zhs-cn-shijiebei.com</div>
+    <div class="footer-links">
+      <a href="#">关于本站</a>
+      <a href="#">常见问题</a>
+      <a href="#">反馈</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
